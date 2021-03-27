@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тестовое задание</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <div class="cards">
+    <product-card
+        v-for="(item, index) in cards"
+        :key="index"
+        :card="item">
+    </product-card>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    new Vue({ 
+      el: '.cards',
+      data: {
+        cards: [
+          {
+            price: 179,
+            productName: 'Платье хлопковое с логотипом MM6',
+            seller: 'Anna 33',
+            flag: '🇨🇦',
+            currency: '&#36;',
+            productRating: '4+',
+            image: {
+              source: './img/dress/front.jpg',
+              alt: 'Платье хлопковое с логотипом MM6',
+            },
+            semiliarProducts: [
+              {img: './img/dress/2.jpg', link: 'https://vipavenue.ru/product/896848-Platye-hlopkovoe-s-logotipom-mm6-print/'},
+              {img: './img/dress/3.jpg', link: 'https://vipavenue.ru/product/896848-Platye-hlopkovoe-s-logotipom-mm6-print/'},
+              {img: './img/dress/4.jpg', link: 'https://vipavenue.ru/product/896848-Platye-hlopkovoe-s-logotipom-mm6-print/'},
+              {img: './img/dress/5.jpg', link: 'https://vipavenue.ru/product/896848-Platye-hlopkovoe-s-logotipom-mm6-print/'},
+            ],
+            propertyProduct: [
+              'размер 44-56',
+              'м-л: футер',
+            ],
+          },
+          {
+            price: 200,
+            productName: 'Paint',
+            seller: 'A simple sample',
+            flag: '🇷🇺',
+            currency: '&#x20bd;',
+            productRating: '5',
+            image: {
+              source: './img/vertical.jpg',
+              alt: 'Anna 33',
+            },
+            propertyProduct: [
+              'просто пример',
+            ],
+            semiliarProducts: [
+
+            ],
+          },
+          {
+            price: 179,
+            productName: 'Paint',
+            seller: 'ТЭК',
+            flag: '🇨🇳',
+            productRating: '4',
+            image: {
+              source: './img/paint-1.webp',
+              alt: 'paint',
+            },
+            currency: '&#65509;',
+            semiliarProducts: [
+              { img: './img/paint-2.jpeg', link: 'https://goggle.com' },
+              { img: './img/paint-1.webp', link: 'https://goggle.com' }
+            ],
+            propertyProduct: [
+              'вес: 3кг',
+              'с-в: Акрил',
+            ]
+          },
+
+          {
+            price: 179,
+            productName: 'Джинсы',
+            seller: 'Inna 28',
+            flag: '🇬🇷',
+            productRating: '4+',
+            image: {
+              source: './img/jeans/front.jpg',
+              alt: 'Anna 33',
+            },
+            currency: '&#8364;',
+            semiliarProducts: [
+              {img: './img/jeans/2.jpg', link: 'https://goggle.com'},
+              {img: './img/jeans/3.jpg', link: 'https://goggle.com'},
+              {img: './img/jeans/4.jpg', link: 'https://goggle.com'},
+            ],
+            propertyProduct: [
+              'размер 44-56',
+              'цвет: синий',
+            ]
+          },
+        ],
+      },
+   });
+  </script>
+</body>
+</html>
